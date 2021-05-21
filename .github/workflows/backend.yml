@@ -51,6 +51,11 @@ jobs:
           pip install poetry
           poetry install -v
       - name: Test
+        env:
+          POSTGRES_SERVER: db
+          POSTGRES_USER: evox
+          POSTGRES_PASSWORD: evox
+          POSTGRES_DB: evox
         run: |
           poetry run bash ./prestart.sh
           poetry run pytest --cov=app --cov-report=xml app/tests "${@}"
