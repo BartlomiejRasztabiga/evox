@@ -52,7 +52,7 @@ jobs:
           poetry install -v
       - name: Test
         env:
-          POSTGRES_SERVER: postgres
+          POSTGRES_SERVER: localhost
           POSTGRES_USER: evox
           POSTGRES_PASSWORD: evox
           POSTGRES_DB: evox
