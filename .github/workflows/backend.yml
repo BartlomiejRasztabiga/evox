@@ -52,6 +52,5 @@ jobs:
           poetry install -v
       - name: Test
         run: |
-          poetry shell
-          bash ./prestart.sh
-          pytest --cov=app --cov-report=xml app/tests "${@}"
+          poetry run bash ./prestart.sh
+          poetry run pytest --cov=app --cov-report=xml app/tests "${@}"
