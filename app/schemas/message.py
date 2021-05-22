@@ -6,15 +6,17 @@ from pydantic.main import BaseModel
 # Shared properties
 class MessageBase(BaseModel):
     content: str
+    views_count: int
 
 
 # Properties to receive via API on creation
-class MessageBaseCreateDto(MessageBase):
-    pass
+class MessageBaseCreateDto:
+    content: str
 
 
-class MessageBaseUpdateDto(MessageBase):
-    pass
+# Properties to receive via API on update
+class MessageBaseUpdateDto:
+    content: str
 
 
 class MessageBaseInDBBase(MessageBase):
