@@ -64,7 +64,7 @@ class MessageService:
 
         return message
 
-    def increase_view_count_by_id(self, db: Session, _id: int) -> Message:
+    def increment_view_count_by_id(self, db: Session, _id: int) -> Message:
         # get existing message, will throw 404 if there is not message with given id
         message = self.get_by_id(db, _id)
 

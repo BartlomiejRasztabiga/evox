@@ -35,7 +35,7 @@ def test_given_existing_message_when_increase_view_count_by_id_then_will_return_
     message = services.messages.create(db, message_create_dto)
 
     # when
-    existing_message = services.messages.increase_view_count_by_id(db, message.id)
+    existing_message = services.messages.increment_view_count_by_id(db, message.id)
 
     # then
     assert existing_message is not None
@@ -52,9 +52,9 @@ def test_given_existing_message_when_multiple_get_by_id_then_will_increase_view_
     message = services.messages.create(db, message_create_dto)
 
     # when
-    services.messages.increase_view_count_by_id(db, message.id)
-    services.messages.increase_view_count_by_id(db, message.id)
-    services.messages.increase_view_count_by_id(db, message.id)
+    services.messages.increment_view_count_by_id(db, message.id)
+    services.messages.increment_view_count_by_id(db, message.id)
+    services.messages.increment_view_count_by_id(db, message.id)
 
     # then
     existing_message = services.messages.get_by_id(db, message.id)

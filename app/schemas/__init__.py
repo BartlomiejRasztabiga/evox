@@ -1,1 +1,1 @@
-from .message import Message, MessageCreateDto
+from .message import Message, MessageCreateDto, MessageUpdateDto
