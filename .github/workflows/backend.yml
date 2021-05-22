@@ -65,7 +65,7 @@ jobs:
     steps:
       - name: Docker meta
         id: docker_meta
-        uses: crazy-max/ghaction-docker-meta@v1
+        uses: docker/metadata-action@v3
         with:
           images: |
             navareth/evox
