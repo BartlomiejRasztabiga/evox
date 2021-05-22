@@ -9,7 +9,7 @@ from app.exceptions.message import (
 )
 from app.schemas import MessageCreateDto
 from app.schemas.message import MessageUpdateDto
-from app.tests.utils.utils import random_string
+from app.tests.utils import random_string
 
 
 def test_given_new_message_when_create_message_then_will_create_one(
