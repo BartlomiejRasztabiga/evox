@@ -5,4 +5,3 @@ app.egg-info
 /.coverage
 htmlcov/
 coverage.xml
-.env
