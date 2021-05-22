@@ -5,7 +5,6 @@ REST API written in the FastAPI framework for message persistence with authentic
 ### Requirements:
 - Docker
 - docker-compose
-- Poetry [https://python-poetry.org]()
 
 ### Framework used
 This app is built using FastAPI framework [https://fastapi.tiangolo.com/]().
