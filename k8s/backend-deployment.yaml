@@ -28,7 +28,7 @@ spec:
               value: evox
             - name: API_KEY
               value: ca9c1d4509ec6c9b9550fecfab3817a9b87e5e06bcbfe94298b12ce14ca8e428
-          image: navareth/evox:sha-0e64a87
+          image: navareth/evox:sha-7ecd7c0
           name: backend
           ports:
             - containerPort: 8080
