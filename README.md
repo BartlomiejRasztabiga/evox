@@ -100,7 +100,7 @@ This app is deployed on my private Kubernetes cluster. Configuration used for th
 
 Currently, it's running 3 replicas of backend pods, so it's easily scalable.
 
-App is listening on the following URL: [https://evox.rasztabiga.me/api/v1/](https://evox.rasztabiga.me/api/v1/)
+App is listening on the following URL: [https://evox.rasztabiga.me/api/v1/messages](https://evox.rasztabiga.me/api/v1/messages)
 
 SSL certificate and DDoS protection is provided by Cloudflare.
 
