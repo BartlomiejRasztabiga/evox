@@ -7,7 +7,7 @@ REST API written in the FastAPI framework for message persistence with authentic
 - docker-compose
 
 ### Framework used
-This app is built using FastAPI framework [https://fastapi.tiangolo.com/]().
+This app is built using FastAPI framework [https://fastapi.tiangolo.com](https://fastapi.tiangolo.com).
 
 It consists of the Starlette ASGI framework and Pydantic library.
 
@@ -41,12 +41,12 @@ The following script will run tests in an isolated docker environment, so you do
 
 
 ### REST API Documentation using swagger:
-[https://evox.rasztabiga.me/docs]()
+[https://evox.rasztabiga.me/docs](https://evox.rasztabiga.me/docs)
 
 It also allows users to test the API using a simple interface.
 
 ### REST API Documentation using redoc:
-[https://evox.rasztabiga.me/redoc]()
+[https://evox.rasztabiga.me/redoc](https://evox.rasztabiga.me/redoc)
 
 Both documentations include examples of request and response bodies. 
 
@@ -100,7 +100,7 @@ This app is deployed on my private Kubernetes cluster. Configuration used for th
 
 Currently, it's running 3 replicas of backend pods, so it's easily scalable.
 
-App is listening on the following URL: [https://evox.rasztabiga.me/api/v1/]()
+App is listening on the following URL: [https://evox.rasztabiga.me/api/v1/](https://evox.rasztabiga.me/api/v1/)
 
 SSL certificate and DDoS protection is provided by Cloudflare.
 
@@ -108,7 +108,7 @@ SSL certificate and DDoS protection is provided by Cloudflare.
 
 I'm using GitHub Actions job to execute linter and tests on each push to GitHub. It also builds and pushes Docker image of the app to DockerHub.
 
-You can locate it here: [https://hub.docker.com/r/navareth/evox]()
+You can locate it here: [https://hub.docker.com/r/navareth/evox](https://hub.docker.com/r/navareth/evox)
 
 ### Environment variables
 
