@@ -5,11 +5,24 @@ from app import schemas, services
 from app.api import deps
 from app.core.security import verify_api_key
 from app.models import Message
+from app.schemas.api import ErrorResponse
 
 router = APIRouter()
+responses = {
+    200: {"description": "Success response.", "model": schemas.Message},
+    400: {
+        "description": "Bad request, check required request body.",
+        "model": ErrorResponse,
+    },
+    401: {"description": "Not authorized", "model": ErrorResponse},
+    404: {
+        "description": "Message with given id does not exist.",
+        "model": ErrorResponse,
+    },
+}
 
 
-@router.get("/{id}", response_model=schemas.Message)
+@router.get("/{id}", response_model=schemas.Message, responses=responses)
 async def get_message(id: int, db: Session = Depends(deps.get_db)) -> Message:
     """
     Retrieves message by ID. Increments message's views count.
@@ -21,7 +34,7 @@ async def get_message(id: int, db: Session = Depends(deps.get_db)) -> Message:
     return services.messages.get_by_id(db=db, _id=id)
 
 
-@router.post("/", response_model=schemas.Message)
+@router.post("/", response_model=schemas.Message, responses=responses)
 async def create_message(
     *,
     db: Session = Depends(deps.get_db),
@@ -34,7 +47,7 @@ async def create_message(
     return services.messages.create(db=db, message_create_dto=message_create_dto)
 
 
-@router.put("/{id}", response_model=schemas.Message)
+@router.put("/{id}", response_model=schemas.Message, responses=responses)
 async def update_message(
     *,
     db: Session = Depends(deps.get_db),
@@ -50,7 +63,7 @@ async def update_message(
     )
 
 
-@router.delete("/{id}", response_model=schemas.Message)
+@router.delete("/{id}", response_model=schemas.Message, responses=responses)
 async def delete_message(
     *, db: Session = Depends(deps.get_db), id: int, _: bool = Depends(verify_api_key)
 ) -> Message:
