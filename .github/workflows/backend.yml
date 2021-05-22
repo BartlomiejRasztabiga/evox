@@ -71,6 +71,7 @@ jobs:
             navareth/evox
           tags: |
             type=ref,event=branch
+            type=ref,event=tag
             type=sha
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
