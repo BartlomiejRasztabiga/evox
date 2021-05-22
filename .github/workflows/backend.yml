@@ -60,6 +60,7 @@ jobs:
           poetry run bash ./prestart.sh
           poetry run pytest --cov=app --cov-report=xml app/tests "${@}"
   docker:
+    needs: [ lint, test ]
     runs-on: ubuntu-latest
 
     steps:
