@@ -10,7 +10,7 @@ services:
       - PGDATA=/var/lib/postgresql/data/pgdata
 
   backend:
-    image: "navareth/evox:sha-25197a1"
+    image: "navareth/evox:master"
     depends_on:
       - db
     env_file:
