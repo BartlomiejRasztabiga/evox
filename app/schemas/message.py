@@ -10,16 +10,17 @@ class MessageBase(BaseModel):
 
 
 # Properties to receive via API on creation
-class MessageBaseCreateDto:
+class MessageCreateDto:
     content: str
 
 
 # Properties to receive via API on update
-class MessageBaseUpdateDto:
+class MessageUpdateDto:
     content: str
 
 
-class MessageBaseInDBBase(MessageBase):
+# Additional properties stored in DB
+class MessageInDB(MessageBase):
     id: Optional[int] = None
 
     class Config:
@@ -27,10 +28,5 @@ class MessageBaseInDBBase(MessageBase):
 
 
 # Additional properties to return via API
-class Message(MessageBaseInDBBase):
-    pass
-
-
-# Additional properties stored in DB
-class MessageInDB(MessageBaseInDBBase):
+class Message(MessageInDB):
     pass
