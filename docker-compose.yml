@@ -18,7 +18,7 @@ services:
     environment:
       - POSTGRES_SERVER=db:5432
     ports:
-      - "8080:80"
+      - "8080:8080"
     build:
       context: .
       dockerfile: Dockerfile
