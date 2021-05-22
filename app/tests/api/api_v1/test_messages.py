@@ -16,7 +16,7 @@ def test_create_message(
     }
 
     response = client.post(
-        f"{settings.API_V1_STR}/messages/", headers=authentication_headers, json=data,
+        f"{settings.API_V1_STR}/messages", headers=authentication_headers, json=data,
     )
 
     assert response.status_code == 200
