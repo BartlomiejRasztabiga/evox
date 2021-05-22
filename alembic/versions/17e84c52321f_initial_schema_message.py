@@ -1,7 +1,7 @@
 """Initial schema (Message)
 
 Revision ID: 17e84c52321f
-Revises: 
+Revises:
 Create Date: 2021-05-22 12:31:43.408142
 
 """
