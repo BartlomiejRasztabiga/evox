@@ -34,7 +34,7 @@ async def get_message(id: int, db: Session = Depends(deps.get_db)) -> Message:
     return services.messages.get_by_id(db=db, _id=id)
 
 
-@router.post("/", response_model=schemas.Message, responses=responses)
+@router.post("", response_model=schemas.Message, responses=responses)
 async def create_message(
     *,
     db: Session = Depends(deps.get_db),
