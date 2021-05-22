@@ -10,12 +10,12 @@ class MessageBase(BaseModel):
 
 
 # Properties to receive via API on creation
-class MessageCreateDto:
+class MessageCreateDto(BaseModel):
     content: str
 
 
 # Properties to receive via API on update
-class MessageUpdateDto:
+class MessageUpdateDto(BaseModel):
     content: str
 
 
