@@ -37,7 +37,7 @@ The following script will run tests in an isolated docker environment, so you do
 | GET           | NO                        | `/api/v1/messages/{id}`   | Get message by id       | 200, 400, 401, 404
 | POST          | YES                       | `/api/v1/messages`        | Create new message      | 200, 400, 401
 | PUT           | YES                       | `/api/v1/messages/{id}`   | Update existing message | 200, 400, 401, 404
-| DELETE        | YES                       | `/api/v1/messagess/{id}`  | Delete message          | 200, 400, 401, 404
+| DELETE        | YES                       | `/api/v1/messages/{id}`  | Delete message          | 200, 400, 401, 404
 
 
 ### REST API Documentation using swagger:
